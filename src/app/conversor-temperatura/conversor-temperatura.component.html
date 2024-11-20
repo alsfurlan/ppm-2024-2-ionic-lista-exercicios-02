@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Conversor de Temperatura</h1>
+  <ion-item>
+    <ion-input type="number" placeholder="Temperatura" [(ngModel)]="temperatura"></ion-input>
+    <ion-select [(ngModel)]="converterPara" placeholder="Converter para">
+      <ion-select-option value="Fahrenheit">Fahrenheit</ion-select-option>
+      <ion-select-option value="Kelvin">Kelvin</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button expand="block" (click)="converter()">Converter</ion-button>
+  <p *ngIf="resultado !== null">Resultado: {{ resultado }}</p>
+</div>

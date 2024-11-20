@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Lista de Tarefas</h1>
+  <form (submit)="adicionarTarefa()">
+    <ion-item>
+      <ion-input placeholder="Digite a tarefa" [(ngModel)]="novaTarefa" name="tarefa"></ion-input>
+      <ion-button expand="block" type="submit">Adicionar</ion-button>
+    </ion-item>
+  </form>
+  <ul>
+    <li *ngFor="let tarefa of tarefas">
+      <span [ngClass]="{ concluida: tarefa.concluida, pendente: !tarefa.concluida }" (click)="alternarTarefa(tarefa)">
+        {{ tarefa.descricao }}
+      </span>
+      <ion-button color="danger" (click)="removerTarefa(tarefa)">Excluir</ion-button>
+    </li>
+  </ul>
+</div>

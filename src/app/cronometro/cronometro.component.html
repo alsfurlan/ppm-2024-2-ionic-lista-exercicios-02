@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Cronômetro</h1>
+  <p>{{ minutos }}:{{ segundos | number: '2.0' }}</p>
+  <ion-button expand="block" (click)="iniciar()">Iniciar</ion-button>
+  <ion-button expand="block" color="warning" (click)="pausar()">Pausar</ion-button>
+  <ion-button expand="block" color="danger" (click)="resetar()">Resetar</ion-button>
+</div>
